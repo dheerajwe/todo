@@ -9,6 +9,9 @@ const app=express();
 
 app.use(express.json());
 app.use(cors());
+app.use(cors({
+    origin: [process.env.LOCAL_FRONTEND_URL, process.env.PROD_FRONTEND_URL]
+  }));
 
 const routes=require("./routes/Todoroutes")
 
