@@ -1,0 +1,49 @@
+.hi{
+  height: 30px;
+  width: 300px;
+  border: 5px solid black;
+ 
+}
+
+.h{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   margin-top: 50px;
+}
+.s{
+  height: 40px;
+  color:white;
+  background-color: black;
+  border: 5px solid black;
+  margin-left: 5px;
+}
+.task{
+  display: flex;
+  align-items: center;
+  width: 345px;
+ justify-content: space-between;
+ background-color: black;
+ color: white;
+ height: 35px;
+ padding: 2px 5px 2px 5px;
+ margin-top: 2px;
+
+}
+.icon{
+  margin-top: 3px;
+  font-size: 15px;
+}
+.checkbox {
+  display: flex;
+  align-items: center; /* Centers the checkbox icon and text vertically */
+  gap: 10px; /* Adds space between the checkbox and the text */
+  
+}
+.checkbo{
+  text-decoration: line-through;
+  display: flex;
+  align-items: center; /* Centers the checkbox icon and text vertically */
+  gap: 10px; /* Adds space between the checkbox and the text */
+}
