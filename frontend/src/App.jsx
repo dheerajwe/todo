@@ -6,32 +6,25 @@ import { BsCircle, BsCircleFill } from "react-icons/bs";
 import { BiRadioCircleMarked } from "react-icons/bi";
 import { BsTrashFill } from "react-icons/bs";
 function App() {
-  const backendUrl = process.env.REACT_APP_BACKEND_URL;
   const [todos, settodo] = useState([]);
-
-
   useEffect(()=> {
     
-    axios.get(`${backendUrl}`)
+    axios.get("http://localhost:5000")
     .then(result=>settodo(result.data))
 
 
   })
-
-
   const handleChange=(id)=>{
-    axios.put(`${backendUrl}/update/${id}`)
+    axios.put(`http://localhost:5000/update/${id}`,{_id:id})
     .then(result=> console.log(result));
    
   }
 
-
 const handleDelete=(id)=>{
   console.log("clicked");
-  axios.delete(`${backendUrl}/delete/${id}`)
+  axios.delete(`http://localhost:5000/delete/${id}`)
   .then(result=>console.log(result))
 }
-
 
   return (
     <>

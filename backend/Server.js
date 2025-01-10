@@ -8,10 +8,7 @@ require("dotenv").config()
 const app=express();
 
 app.use(express.json());
-
-
-app.use(cors({ origin: 'https://todo-tawny-six.vercel.app/' }));
-
+app.use(cors());
 
 const routes=require("./routes/Todoroutes")
 
