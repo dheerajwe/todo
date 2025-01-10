@@ -2,11 +2,12 @@ import { useState } from "react"
 import "./App.css"
 import axios from "axios";
 function Input(){
+    const backendUrl = process.env.REACT_APP_BACKEND_URL;
     const [task,setTask]=useState("");
     const handleAdd=(event)=>{
         event.preventDefault();
       
-        axios.post("http://localhost:5000/create" ,{task:task})
+        axios.post(`${backendUrl}/create`,{task:task})
         .then(result=>console.log(result));
 
         setTask("");
