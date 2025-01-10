@@ -10,7 +10,7 @@ const app=express();
 app.use(express.json());
 
 
-app.use(cors({ origin: 'https://todo-d6o46dhix-dheerajwes-projects.vercel.app/' }));
+app.use(cors({ origin: 'https://todo-tau-umber.vercel.app/' }));
 
 
 const routes=require("./routes/Todoroutes")
